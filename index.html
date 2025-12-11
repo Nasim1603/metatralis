@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metatralis - Beyond Data Transformation!</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', sans-serif; color:#222; background:#fff; }
+
+    /* Header */
+    header {
+      width:100%;
+      background:#0f172a;
+      color:#fff;
+      padding:15px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo { font-size:1.8rem; font-weight:700; }
+
+    nav ul {
+      list-style:none;
+      display:flex;
+      align-items:center;
+    }
+
+    nav ul li { margin-left:30px; }
+
+    nav ul li a {
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 5px;
+      transition:color 0.3s;
+    }
+
+    nav ul li a:hover { color:#14b8a6; }
+
+    /* Hero Section */
+    .hero {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      height:80vh;
+
+      background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        no-repeat center center/cover;
+
+      color:#fff;
+      padding:0 20px;
+    }
+
+    .hero h1 { font-size:3rem; margin-bottom:20px; }
+    .hero p { font-size:1.5rem; margin-bottom:30px; }
+
+    .hero button {
+      background:#fff;
+      color:#0f172a;
+      border:none;
+      padding:15px 30px;
+      font-size:1rem;
+      font-weight:600;
+      border-radius:5px;
+      cursor:pointer;
+      transition:background 0.3s;
+    }
+
+    .hero button:hover { background:#f1f5f9; }
+
+    /* Info Box for Footer Click */
+    #info-box {
+      padding: 40px;
+      background: #f8fafc;
+      display: none;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .footer-link { cursor:pointer; }
+    .footer-link:hover { color:#0ea5e9; }
+
+    /* Responsive */
+    @media(max-width:768px){
+      header { flex-direction:column; align-items:flex-start; }
+
+      nav ul {
+        flex-direction:column;
+        width:100%;
+      }
+
+      nav ul li {
+        margin-left:0;
+        width:100%;
+        padding:10px 0;
+      }
+    }
+  </style>
+
+  <script>
+    function showInfo(title, content) {
+      document.getElementById("info-title").innerText = title;
+      document.getElementById("info-content").innerText = content;
+      document.getElementById("info-box").style.display = "block";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">Metatralis</div>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Solutions</a></li>
+      <li><a href="#">Industries</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Info Box (hidden) -->
+<div id="info-box">
+  <h2 id="info-title" style="margin-bottom:10px;"></h2>
+  <p id="info-content"></p>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Metatralis</h1>
+  <p>Beyond Data Transformation!</p>
+  <button>Get in Touch</button>
+</section>
+
+<!-- Footer -->
+<footer style="background:#0f172a; color:#fff; padding:60px 50px;">
+  <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between;">
+
+    <!-- Solutions -->
+    <div style="flex:1; min-width:200px;">
+      <h4 style="margin-bottom:15px;">Solutions</h4>
+      <ul style="list-style:none;">
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Our Solutions</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Generative AI</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Computer Vision</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Natural Language Processing</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Content Moderation</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Data Processing</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Document Processing</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Off-the-Shelf Data</a></li>
+      </ul>
+    </div>
+
+    <!-- Industries -->
+    <div style="flex:1; min-width:200px;">
+      <h4 style="margin-bottom:15px;">Industries</h4>
+      <ul style="list-style:none;">
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Domain Expertise</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Autonomous Vehicle</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Medical</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">PropTech</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Geospatial</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Robotics</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Agritech</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Retail</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Financial Services</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Insurance</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">E-commerce</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Security & Surveillance</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Logistics</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div style="flex:1; min-width:200px;">
+      <h4 style="margin-bottom:15px;">Services</h4>
+      <ul style="list-style:none;">
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Enterprise Data-Labeling</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Medical Annotation</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Image Annotation</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Text Annotation</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Video Annotation</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Audio Annotation</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Sentiment Analysis</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">3D Point Cloud Annotation</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Content Moderation</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Data Classification</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Medical Coding</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources & Contact -->
+    <div style="flex:1; min-width:200px;">
+      <h4 style="margin-bottom:15px;">Resources</h4>
+      <ul style="list-style:none;">
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Get Started</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Blog</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Case Studies</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">E-book</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Certifications</a></li>
+        <li><a href="mailto:info@metatralis.in" style="color:#cbd5e1; text-decoration:none;">info@metatralis.in</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Schedule a Call</a></li>
+      </ul>
+    </div>
+
+    <!-- About -->
+    <div style="flex:1; min-width:200px;">
+      <h4 style="margin-bottom:15px;">About</h4>
+      <ul style="list-style:none;">
+        <li class="footer-link" onclick="showInfo('Who We Are', 'Metatralis is a global AI data solutions company...')">Who We Are</li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Leadership Team</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Life at Metatralis</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Workflow Methodology</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Contact Us</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Partners</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Press</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Newsroom</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Careers</a></li>
+        <li><a href="#" style="color:#cbd5e1; text-decoration:none;">Working at Metatralis</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div style="text-align:center; margin-top:50px; color:#94a3b8; font-size:0.9rem;">
+    © 2025 Metatralis. All Rights Reserved.
+  </div>
+
+</footer>
+
+</body>
+</html>
